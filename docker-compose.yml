@@ -23,8 +23,8 @@ services:
   doh-proxy:
     image: visibilityspots/cloudflared
     restart: unless-stopped
-    environment:
-      UPSTREAM1:https://dns.google/dns-query
+    # environment:
+    #  UPSTREAM1:https://dns.google/dns-query # if you want to change from the default cloudflare
     networks:
       default:
         ipv4_address: 172.16.1.5
