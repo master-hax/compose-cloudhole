@@ -18,7 +18,7 @@ the pi-hole web UI should be accessible at http://localhost:54/admin
 ### to use cloudhole for all containers:
 set Docker host to use `127.0.0.1` as the DNS resolver. all your containers will use pi-hole automatically through the Docker engine.
 
-**note**: don't use the Docker host's external/LAN IP address or a DHCP provided DNS server for the Docker host. (see below)
+**note**: don't set the Docker host to use its own external/LAN IP address as the resolver (as you might through DHCP), see below
 
 ### to override a specific container with cloudhole:
 ```
