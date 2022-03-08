@@ -23,9 +23,9 @@ services:
   doh-proxy:
     image: visibilityspots/cloudflared
     restart: unless-stopped
-    # environment:
-    #  - UPSTREAM1=https://dns.google/dns-query # if you want to change from the default cloudflare
-    #  - UPSTREAM2=https://dns.quad9.net/dns-query
+    # environment: # if you want to change from the default cloudflare
+    #  - UPSTREAM1=https://8.8.8.8/dns-query # Google DoH
+    #  - UPSTREAM2=https://9.9.9.9/dns-query # Quad9 DoH
     networks:
       default:
         ipv4_address: 172.16.1.5
