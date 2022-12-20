@@ -42,7 +42,7 @@ to use cloudhole across all devices on your network, give your Docker host a sta
 
 ### note for Docker hosts using DHCP:
 
-if your Docker host is set to use its own external IP address as the DNS resolver (probably via DHCP), this will break DNS resolution for your containers. the reason for this is that the DNS requests that are addressed externally will reach the pi-hole but the packets won't reach the containers on their way back.
+if your Docker host is set to use its own external IP address as the DNS resolver (that it might have gotten via DHCP from your router), this will break DNS resolution for your containers. the reason for this is that the DNS requests that are addressed externally will reach the pi-hole but the packets won't reach the containers on their way back.
 
 however using a static `127.0.0.1` on the host or `172.16.1.4` in the container works fine & the Docker engine is able to route the responses successfully.
 
