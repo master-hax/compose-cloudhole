@@ -5,7 +5,8 @@ services:
     image: pihole/pihole
     restart: unless-stopped
     # volumes:
-      # - $PWD/custom_hosts:/etc/pihole/custom.list:ro # use this for custom hosts
+      # - $PWD/custom_hosts:/etc/pihole/custom.list:rw                                    # use this for persistent custom hosts
+      # - /home/dietpi/git/device-configs/config/dns/gravity.db:/etc/pihole/gravity.db:rw # use this for persistent adlists 
     ports:
       - 54:80/tcp
       - 53:53/udp
