@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   dns-server:
-    image: pihole/pihole
+    image: pihole/pihole:2022.12
     restart: unless-stopped
     # volumes:
       # - $PWD/custom_hosts:/etc/pihole/custom.list:rw # use this for persistent custom hosts
@@ -26,7 +26,7 @@ services:
         ipv4_address: 172.16.1.4
 
   doh-proxy:
-    image: visibilityspots/cloudflared
+    image: visibilityspots/cloudflared:2022.12.1-alpine-3.17
     restart: unless-stopped
     # environment: # if you want to change from the default cloudflare
     #  - UPSTREAM1=https://8.8.8.8/dns-query # Google DoH
