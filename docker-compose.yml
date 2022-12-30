@@ -4,6 +4,8 @@ services:
   dns-server:
     image: pihole/pihole
     restart: unless-stopped
+    # volumes:
+      # - $PWD/custom_hosts:/etc/pihole/custom.list:ro # use this for custom hosts
     ports:
       - 54:80/tcp
       - 53:53/udp
