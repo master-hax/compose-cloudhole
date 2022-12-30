@@ -5,6 +5,7 @@ a multi-container Docker application to run a [pi-hole](https://hub.docker.com/r
 ## how to set it up
 
 1. download [docker-compose.yml](/docker-compose.yml)
+1. create a file named `pwd` containing the desired password for the web interface
 1. run `docker-compose up`
 
 if everything works correctly, you should be able to resolve hosts securely & without ads on port 53!
