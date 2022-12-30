@@ -17,7 +17,6 @@ services:
       - WEBPASSWORD_FILE=/run/secrets/pihole_password
       - DNSMASQ_LISTENING=all  # required due to our internal subnet. remove this if you only intend to use cloudhole from within the subnet
       - PIHOLE_DNS_=172.16.1.5#5054
-      # - WEBPASSWORD=pihole   # change this or the password will be generated automatically
     extra_hosts:
       cloudflared: 172.16.1.5 # optional - adds a readable hostname for the upstream resolver in the pi-hole web UI
       # extra.host.domain.one: 192.168.1.2
@@ -44,4 +43,4 @@ networks:
         - subnet: 172.16.1.0/29 # i think this is the smallest we can go
 secrets:
   pihole_password:
-    file: ./pwd
+    file: ./pwd # put the web password in this file
